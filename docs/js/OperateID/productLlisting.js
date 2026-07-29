@@ -117,10 +117,13 @@ class ProductListingUIProcessorClass
                 const regex = new RegExp(`{@${key}}`, 'g');
                 card = card.replace(regex, item[key]);
             }
+            // Strip any placeholders the API response didn't provide a value for,
+            // so unfilled {@field} tokens never leak into src/href/url() attributes.
+            card = card.replace(/\{@[a-zA-Z0-9_]+\}/g, '');
             html += card;
         });
         return html;
-    } 
+    }
 
     async _loadData() {
             var dataProcessor = new ProductListingDataProcessorClass();
