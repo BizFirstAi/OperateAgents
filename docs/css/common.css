@@ -1,0 +1,27 @@
+.w-hidden {
+    display: none;
+}   
+.right-panel{
+display:flex; text-align: right;justify-content: flex-end;
+width: 100%;
+}
+
+
+
+.list-item-card-smart{
+    background: rgba(42, 39, 39, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.list-item-card-smart:hover{
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 123, 255, 0.2);
+}
+
+.app-product-listing-section-bizfirstdatastores .list-item-card-smart{
+     background: rgba(0, 0, 0, 0.812) !important;
+}
